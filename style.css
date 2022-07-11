@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  list-style-type: none;
+  margin-top: 25px;
+}
+
+.draggable-list li {
+  background-color: #fff;
+  display: flex;
+  flex: 1;
+}
+
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  background-color: var(--background-color);
+}
+
+.draggable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 15px;
+  flex: 1;
+}
+
+.draggable .person-name {
+  margin-right: 10px;
+}
+
+.draggable-list li.right .person-name {
+  color: #3ae374;
+}
+
+.draggable-list li.wrong .person-name {
+  color: #ff3838;
+}
+
+.check-btn {
+  outline: none;
+  border: 1px solid var(--border-color);
+  padding: 15px 20px;
+  margin-top: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.check-btn:hover {
+  background-color: #727374;
+  color: #e3e5e4;
+}
